@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{675B2811-9A5C-40BB-8A9A-F0C2E552916D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\slick-theme.css" />
+    <Content Include="css\slick.css" />
+    <Content Include="css\StyleSheet1.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\510401-335x335.jpg" />
+    <Content Include="images\72 Social Icons by Dreamstale\72 Social Icons by Dreamstale.ai" />
+    <Content Include="images\72 Social Icons by Dreamstale\72 Social Icons by Dreamstale.eps" />
+    <Content Include="images\72 Social Icons by Dreamstale\72 Social Icons by Dreamstale.svg" />
+    <Content Include="images\72 Social Icons by Dreamstale\Licence-READ-ME.txt" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %281%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2810%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2811%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2812%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2813%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2814%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2815%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2816%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2817%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2818%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2819%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %282%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2820%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2821%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2822%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2823%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2824%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2825%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2826%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2827%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2828%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2829%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %283%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2830%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2831%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2832%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2833%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2834%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2835%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2836%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2837%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2838%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2839%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %284%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2840%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2841%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2842%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2843%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2844%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2845%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2846%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2847%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2848%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2849%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %285%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2850%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2851%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2852%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2853%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2854%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2855%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2856%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2857%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2858%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2859%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %286%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2860%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2861%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2862%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2863%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2864%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2865%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2866%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2867%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2868%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2869%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %287%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2870%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2871%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %2872%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %288%29.png" />
+    <Content Include="images\72 Social Icons by Dreamstale\PNG\Social Icons by Dreamstale %289%29.png" />
+    <Content Include="images\ABC.jpg" />
+    <Content Include="images\animace-041.jpg" />
+    <Content Include="images\animace-gr.jpg" />
+    <Content Include="images\animace.jpg" />
+    <Content Include="images\art.jpg" />
+    <Content Include="images\art2.jpg" />
+    <Content Include="images\art3.jpg" />
+    <Content Include="images\child1.jpg" />
+    <Content Include="images\children1.jpg" />
+    <Content Include="images\English.jpg" />
+    <Content Include="images\english1.jpg" />
+    <Content Include="images\facebook.png" />
+    <Content Include="images\fon2.png" />
+    <Content Include="images\food-1.jpg" />
+    <Content Include="images\food.jpg" />
+    <Content Include="images\globussm.png" />
+    <Content Include="images\google.png" />
+    <Content Include="images\gr3.jpg" />
+    <Content Include="images\gr5.jpg" />
+    <Content Include="images\gr6.JPG" />
+    <Content Include="images\grsl.jpg" />
+    <Content Include="images\ind2.jpg" />
+    <Content Include="images\korablik.jpg" />
+    <Content Include="images\logoped1.jpg" />
+    <Content Include="images\music.jpg" />
+    <Content Include="images\music3.jpg" />
+    <Content Include="images\Muzyka1.jpg" />
+    <Content Include="images\ourcommand1.jpg" />
+    <Content Include="images\peace.jpg" />
+    <Content Include="images\peace11.jpg" />
+    <Content Include="images\pencil2.jpg" />
+    <Content Include="images\scool.jpg" />
+    <Content Include="images\slider\ABCsl.jpg" />
+    <Content Include="images\slider\art3sl.jpg" />
+    <Content Include="images\slider\ind2sl.jpg" />
+    <Content Include="images\slider\music3sl.jpg" />
+    <Content Include="images\slider\peace11sl.jpg" />
+    <Content Include="images\slider\pencil2sl.jpg" />
+    <Content Include="images\slider\sport2sl.jpg" />
+    <Content Include="images\slider\theatre1sl.jpg" />
+    <Content Include="images\sport.jpg" />
+    <Content Include="images\sport2.jpg" />
+    <Content Include="images\Theatre.jpg" />
+    <Content Include="images\theatre1-1.jpg" />
+    <Content Include="images\theatre1.jpg" />
+    <Content Include="images\twitter.png" />
+    <Content Include="images\vacancy.jpg" />
+    <Content Include="images\я.jpg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\My.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="js\slick.js" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\App_LocalResources\" />
+    <Folder Include="images\NewFolder1\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49761</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
